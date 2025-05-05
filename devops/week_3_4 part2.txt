@@ -1,0 +1,42 @@
+
+student@246-6 MINGW64 ~/Downloads
+$ ssh -i "jenkins-devm.pem" ubuntu@ec2-13-233-104-173.ap-south-1.compute.amazonaws.com
+Welcome to Ubuntu 24.04.1 LTS (GNU/Linux 6.8.0-1021-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Wed Mar 19 04:34:58 UTC 2025
+
+  System load:  0.0               Processes:             115
+  Usage of /:   43.9% of 6.71GB   Users logged in:       1
+  Memory usage: 68%               IPv4 address for enX0: 172.31.11.45
+  Swap usage:   0%
+
+
+Expanded Security Maintenance for Applications is not enabled.
+
+134 updates can be applied immediately.
+47 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Wed Mar 19 04:01:37 2025 from 103.172.179.18
+ubuntu@ip-172-31-11-45:~$ pwd
+/home/ubuntu
+ubuntu@ip-172-31-11-45:~$ sudo su -
+root@ip-172-31-11-45:~# find / -name jvm
+/usr/lib/debug/usr/lib/jvm
+/usr/lib/jvm
+/usr/share/gdb/auto-load/usr/lib/jvm
+root@ip-172-31-11-45:~# cd /usr/lib/jvm
+root@ip-172-31-11-45:/usr/lib/jvm# find / -name java-17*
+/usr/lib/debug/usr/lib/jvm/java-17-openjdk-amd64
+/usr/lib/jvm/java-17-openjdk-amd64
+/usr/share/gdb/auto-load/usr/lib/jvm/java-17-openjdk-amd64
+root@ip-172-31-11-45:/usr/lib/jvm# vim .profile
+root@ip-172-31-11-45:/usr/lib/jvm#
